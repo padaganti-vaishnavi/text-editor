@@ -1,0 +1,37 @@
+body{
+   background-image: url('/web/img.jpg');
+   background-size: cover;
+   text-align: center;
+
+}
+
+.container-lg.h4{
+    color: white;
+}
+
+.container-lg.h4 {
+    text-align: center;
+    font-style: italic  ;
+    color: white ;
+}
+
+p {
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+label {
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    padding-top: 30px;
+}
+
+.enter {
+    background: rgba(0,0, 0, 0.5);
+    border-left: 7px;
+    width: 60%;
+    padding: 30px;
+    margin-left: 300px;
+}
