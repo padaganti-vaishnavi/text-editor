@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link href="/web/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <title>Text-Modifier</title>
+    
+</head>
+
+<body>
+    <script>
+        function handleUpClick(text) {
+            let Upcase = text.toUpperCase();
+            console.log(Upcase)
+            document.getElementById('out').innerHTML = Upcase;
+
+        }
+
+        function handleLoClick(text) {
+            let Locase = text.toLowerCase();
+            console.log(Locase)
+            document.getElementById('out').innerHTML = Locase;
+        }
+
+        function handleExtraSpaces(text) {
+            let Nospace = text.trim();
+            console.log(Nospace)
+            document.getElementById('out').innerHTML = Nospace;
+        }
+
+        function handleClearClick() {
+            document.getElementById('out').innerHTML = '';
+        }
+
+    </script>
+    <h1 style="color: black; font-style: italic;"> >>> TEXT-MODIFIER <<< </h1>
+
+    <div class="enter">
+    <div class="container-lg my-4">
+        <div class="container">
+            <textarea id="inputtext" rows="7" cols="100" placeholder="Start writing here...."></textarea>
+        </div>
+        <div className="mb-3">
+
+            <button class="btn btn-success mx-1 my-1" onClick='handleUpClick(inputtext.value)'>Convert to
+                Uppercase</button>
+            <button class="btn btn-success mx-1 my-1" onClick='handleLoClick(inputtext.value)'>Convert to
+                Lowercase</button>
+            <button class="btn btn-success mx-1 my-1" onClick='handleExtraSpaces(inputtext.value)'>Remove Extra
+                Spaces</button>
+            <button class="btn btn-success mx-1 my-1" onClick='handleClearClick()'>Clear Formatted-Text</button>
+            <!-- <button class="btn btn-success mx-1 my-1" onClick={handleCopy}>Copy Text</button> -->
+
+        </div>
+        <label class="text-decoration-underline"> Formatted Text ~</label>
+        <p id="out">
+        </p>
+    </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
+  
